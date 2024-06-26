@@ -20,5 +20,19 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="8e2b5175-0367-46ad-9018-39d2d3ecab09" />
+	</flow>
+	<flow name="sampleFlow1" doc:id="f95109c4-038e-443e-b769-a9e06b86fe59" >
+		<http:listener doc:name="Listener" doc:id="3e13c9ae-948e-4fd4-a73a-0d9a887a0184" config-ref="HTTP_Listener_config" path="/test"/>
+		<ee:transform doc:name="Transform Message" doc:id="c1b9b354-d3a5-4e56-bba1-024c37fe5aee" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	message: "Hello"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
 	</flow>
 </mule>
