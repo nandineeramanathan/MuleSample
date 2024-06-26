@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	message: "Sample Mule feature 1 Test Project"
+	message: "Sample Mule feature 2 Project"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
